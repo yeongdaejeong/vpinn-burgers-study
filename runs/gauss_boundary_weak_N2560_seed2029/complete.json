@@ -1,0 +1,28 @@
+{
+  "code_sha256": "0cf2256392397ab61510dfa606b1b094e383f2a14428e84f993aa4109453de62",
+  "result": {
+    "N": 2560,
+    "distribution": "gauss_boundary_weak",
+    "seed": 2029,
+    "relative_l2": 0.0006725891446471423,
+    "relative_linf": 0.0011340801005106792,
+    "u_relative_l2": 0.0005095359755724176,
+    "v_relative_l2": 0.0010450042902791735,
+    "strong_rms": 0.031327579931846254,
+    "strong_max": 0.300116313924162,
+    "boundary_max": 8.392902649241621e-16,
+    "train_loss": 2.8287161661885628e-06,
+    "independent_weak": 2.8287144930000217e-06,
+    "enriched_weak": 2.8584372395372735e-06,
+    "moment_difference": 7.051213461416453e-09,
+    "train_seconds": 125.35585669998545,
+    "gram_condition": 185.48139685384675,
+    "weight_sum": 3.1415926535857883,
+    "effective_sample_size": 1903.7893132216216,
+    "boundary_fraction_r_gt_09": 0.4,
+    "lbfgs_iterations": 1500,
+    "lbfgs_closures": 1591,
+    "initial_state_sha256": "38de1cf98745b27ba79cd1fb2cc3c18064bdcfb431e1a2bf7a4def69a99bc924",
+    "total_seconds": 126.51064879994374
+  }
+}

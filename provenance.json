@@ -1,0 +1,46 @@
+{
+  "source_drive": "https://drive.google.com/file/d/1GyQAGUDruPogJijNejjp8_gOeKWSs9GS/view",
+  "local_source": "<local-project>\\review_sources\\Vector_Burgers2D_VPINN_Sine_KO.ipynb",
+  "sha256": "fc585354d760eb164575f6489aba6fca3b393fe2acb4577cbc632db8870cc4c5",
+  "drive_modified": "2026-11-10T14:12:12.335Z",
+  "verification": "Drive metadata confirmed; fresh binary download unavailable due host DNS. Preserved local original used.",
+  "changes": [
+    "Only VPINN chapter; disk domain unchanged",
+    "45 paired-seed random quadrature experiments",
+    "importance-corrected area integral",
+    "common deterministic validation and P3 reference",
+    "mean and sample standard error, n=5"
+  ],
+  "gauss_extension": {
+    "additional_runs": 15,
+    "total_runs": 60,
+    "rules": {
+      "1280": [
+        20,
+        64
+      ],
+      "2560": [
+        20,
+        128
+      ],
+      "5120": [
+        40,
+        128
+      ]
+    },
+    "legacy_random_hash": "5bbabfae615326661b16452a406aa21c17c031b4d8b7ff699f14dd815146faac",
+    "preservation_manifest": "random_preservation_manifest.json",
+    "same_initialization_and_training_budget": true
+  },
+  "boundary_gauss_extension": {
+    "additional_runs": 30,
+    "total_runs": 90,
+    "alpha": [
+      0.3,
+      0.7
+    ],
+    "mapping": "t=(1-alpha)*s+alpha*s**5; s=F_inverse(t); Gauss weights times pi/(n_angular*q(s))",
+    "preservation_manifest": "pre_boundary_gauss_manifest.json",
+    "old_study_hash": "746359f8557096f5e204d014677e0bd7d644973a88eb4a9651f9d75bc7542256"
+  }
+}

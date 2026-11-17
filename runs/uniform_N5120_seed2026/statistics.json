@@ -1,0 +1,9 @@
+{
+  "adam_seconds": 90.85469900001772,
+  "lbfgs_seconds": 48.48940550000407,
+  "train_seconds": 139.35204219992738,
+  "adam_updates": 3000,
+  "lbfgs_iterations": 1500,
+  "lbfgs_closures": 1580,
+  "final_weak_loss": 0.0011709439281920016
+}

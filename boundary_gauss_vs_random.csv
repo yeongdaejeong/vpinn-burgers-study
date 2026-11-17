@@ -1,0 +1,7 @@
+﻿N,comparison,difference_pp,se_pp
+1280,gauss_boundary_weak - boundary_weak,-58.941903429296666,15.969032022957688
+1280,gauss_boundary_strong - boundary_strong,-38.27481773300998,2.5388426031087223
+2560,gauss_boundary_weak - boundary_weak,-15.186395866496529,2.5042036843191102
+2560,gauss_boundary_strong - boundary_strong,-20.7906170122981,3.8441874432197083
+5120,gauss_boundary_weak - boundary_weak,-6.442414591287944,1.2541879856683877
+5120,gauss_boundary_strong - boundary_strong,-7.665272812515823,1.4156278800098911
