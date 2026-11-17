@@ -1,0 +1,22 @@
+{
+  "depth": 4,
+  "width": 64,
+  "seed": 2026,
+  "parameters": 12802,
+  "train_seconds": 266.3933679999318,
+  "lbfgs_iterations": 1500,
+  "lbfgs_closures": 1591,
+  "vector_relative_l2": 0.0003345070758920366,
+  "vector_relative_linf": 0.0006105423286625561,
+  "u_relative_l2": 0.00025092596318367685,
+  "u_relative_linf": 0.0005313899037699002,
+  "v_relative_l2": 0.0005237154963210461,
+  "v_relative_linf": 0.0009143323532915818,
+  "u_strong_rms": 0.013877534246032166,
+  "v_strong_rms": 0.015156819661102624,
+  "strong_rms": 0.02055030751567924,
+  "boundary_max": 8.41092057045911e-16,
+  "train_loss": 7.789640441787736e-07,
+  "independent_weak": 7.789640441782345e-07,
+  "enriched_weak": 7.96545696765527e-07
+}

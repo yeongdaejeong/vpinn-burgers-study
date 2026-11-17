@@ -1,0 +1,20 @@
+{
+  "python": "3.14.2",
+  "numpy": "2.5.4",
+  "scipy": "1.18.1",
+  "torch": "2.15.0+cpu",
+  "device": "cpu",
+  "dtype": "float64",
+  "torch_threads": 1,
+  "concurrent_workers": 3,
+  "seed": 2026,
+  "evaluation_seed": 314159,
+  "files_sha256": {
+    "architecture_study.py": "fdab73324a0da3366d27ece8994f759fbc93e676701b600a228ee085aa92c691",
+    "reference_core.py": "a630a71c9e91bf08a2c91e5b76f7d991c039019c6adae9d87b16036193cc264c",
+    "study.py": "eaa89bda18f441c174cfab4d3fd9fe4537ddcff5b89eae023e0f5118db749806",
+    "reference/p3_vector_burgers_sine_eps0p1_h0p02.mat": "f4c6526de972e5dcc656bf3c57350ffdf24b649f3b871b4e561ea881f690b138"
+  },
+  "cache_note": "After training, only cache hashing was changed to normalize Git line endings; original training hash is retained in each completion record.",
+  "cache_compatible_code_sha256": "bb99161ef7b5470abf7ee2b37c07cb91f70b910bf6beea0534185a48196c8445"
+}

@@ -1,0 +1,61 @@
+{
+  "runs": 9,
+  "seed": 2026,
+  "all_common_controls_verified": true,
+  "checkpoints": [
+    {
+      "depth": 2,
+      "width": 16,
+      "checkpoint_strong_rms_reproduced": true
+    },
+    {
+      "depth": 2,
+      "width": 32,
+      "checkpoint_strong_rms_reproduced": true
+    },
+    {
+      "depth": 2,
+      "width": 64,
+      "checkpoint_strong_rms_reproduced": true
+    },
+    {
+      "depth": 3,
+      "width": 16,
+      "checkpoint_strong_rms_reproduced": true
+    },
+    {
+      "depth": 3,
+      "width": 32,
+      "checkpoint_strong_rms_reproduced": true
+    },
+    {
+      "depth": 3,
+      "width": 64,
+      "checkpoint_strong_rms_reproduced": true
+    },
+    {
+      "depth": 4,
+      "width": 16,
+      "checkpoint_strong_rms_reproduced": true
+    },
+    {
+      "depth": 4,
+      "width": 32,
+      "checkpoint_strong_rms_reproduced": true
+    },
+    {
+      "depth": 4,
+      "width": 64,
+      "checkpoint_strong_rms_reproduced": true
+    }
+  ],
+  "baseline_differences": {
+    "relative_l2": 0.0,
+    "relative_linf": 0.0,
+    "strong_rms": 0.0,
+    "train_loss": 0.0
+  },
+  "original_72_sources_preserved": true,
+  "appended_cells_executed": true,
+  "embedded_figures": 3
+}
