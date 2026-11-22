@@ -39,3 +39,9 @@ HTML의 그림·CSS·JavaScript·CSV와 노트북에 필요한 모델·참조 �
 참고 노트북은 `Vector_Burgers2D_VPINN_Sine_KO.ipynb`이며 출처와 변경 내역은 [provenance.json](provenance.json)에 있습니다. 실험 사본의 수식·코드·출력을 보존했으며 공개본에서 로컬 컴퓨터 경로만 치환했습니다. 별도의 이용허락을 가정하는 라이선스는 추가하지 않았습니다.
 
 작은 학습 손실은 연속 PDE 정확도의 보장이 아닙니다. P3 참조해도 수치해이며, 표본 최대 오차와 표준오차는 엄밀한 PDE 오차 상한이 아닙니다.
+
+## 원호관 점성 Burgers 추가 실험
+
+[HTML 보고서](https://yeongdaejeong.github.io/vpinn-burgers-study/arc_tube/index.html) · [출력이 포함된 노트북](arc_tube/p8_sampling.ipynb) · [시드별 통계](arc_tube/replication/sensitivity_summary.csv)
+
+네 적분점 배치와 열 개 시드에서 P3 참고해 대비 벡터해의 표본 최대오차를 비교합니다.
