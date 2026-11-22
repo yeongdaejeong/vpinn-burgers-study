@@ -49,14 +49,24 @@ def apply(soup):
     sec=soup.find('section',id='reproduce')
     sec.find('h2').string='10. 노트북과 원자료'
     for summary in sec.find_all('summary'):summary.string='10. 노트북과 원자료 — 상세 보기'
-    qa=BeautifulSoup('<section id="qa"><h2>9. Q&amp;A — 제조해와 신경망 학습</h2>'+rendered_answer()+'</section>','html.parser').section
+    original=(ROOT/'qa_original.html').read_text(encoding='utf8')
+    handler="const s=this.closest('#qa');s.querySelectorAll('[data-qa-panel]').forEach(p=>p.hidden=p.dataset.qaPanel!==this.dataset.qaTarget);s.querySelectorAll('[data-qa-target]').forEach(b=>{b.setAttribute('aria-selected',String(b===this));b.tabIndex=b===this?0:-1;});"
+    toolbar='<div class="qa-view-toolbar" role="tablist" aria-label="Q&A와 쉬운 예제 선택">'
+    for key,label,selected in [('original','Q&A','true'),('example','쉬운 예제 · 가중치 학습 과정','false')]:
+        toolbar+=f'<button type="button" role="tab" id="qa-tab-{key}" aria-controls="qa-panel-{key}" aria-selected="{selected}" tabindex="{0 if selected=="true" else -1}" data-qa-target="{key}" onclick="{handler}">{label}</button>'
+    toolbar+='</div>'
+    body=toolbar+'<div role="tabpanel" id="qa-panel-original" aria-labelledby="qa-tab-original" data-qa-panel="original">'+original+'</div>'
+    body+='<div role="tabpanel" id="qa-panel-example" aria-labelledby="qa-tab-example" data-qa-panel="example" hidden>'+rendered_answer()+'</div>'
+    qa=BeautifulSoup('<section id="qa"><h2>9. Q&amp;A — 제조해와 신경망 학습</h2>'+body+'</section>','html.parser').section
+    for button in qa.select('[role="tab"]'):
+        button['onkeydown']="if(event.key==='ArrowRight'||event.key==='ArrowLeft'){event.preventDefault();const b=this.parentElement.querySelectorAll('button');const next=b[0]===this?b[1]:b[0];next.click();next.focus();}"
     sec.insert_before(qa)
     for a in soup.select('nav a[href="#qa"]'):a.decompose()
     link=soup.select_one('nav a[href="#reproduce"]');link.string='10. 노트북과 원자료'
     a=soup.new_tag('a',href='#qa');a.string='9. Q&A — 제조해와 신경망 학습';link.insert_before(a)
     old=soup.find('style',id='qa-style')
     if old:old.decompose()
-    style=soup.new_tag('style',id='qa-style');style.string=STYLE;soup.head.append(style)
+    style=soup.new_tag('style',id='qa-style');style.string=STYLE+"#qa [hidden]{display:none!important}.qa-view-toolbar{display:flex;gap:10px;flex-wrap:wrap;margin:22px 0;padding-bottom:14px;border-bottom:1px solid #d9dce0}.qa-view-toolbar button{padding:11px 18px;border:1px solid #245d86;border-radius:6px;background:#fff;color:#245d86;font:inherit;cursor:pointer}.qa-view-toolbar button[aria-selected=true]{background:#245d86;color:#fff}.qa-view-toolbar button:focus-visible{outline:3px solid #d59647;outline-offset:3px}#qa article{padding:20px 0}#qa .qa-detail{padding:16px;background:#f5f7f9;border:1px solid #d9dce0}#qa summary{cursor:pointer;font-weight:600}";soup.head.append(style)
 
 if __name__=='__main__':
     paths=[ROOT/'index.html']
